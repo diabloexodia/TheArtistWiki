@@ -1,0 +1,255 @@
+*,
+::after,
+::before {
+  margin: 0px;
+  padding: 0px;
+}
+
+#header,
+#mid,
+#footer,
+#container1,
+#container2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding: 3px;
+  /* border: 2px solid black; */
+  height: 20%;
+}
+
+#header {
+  height: 4rem;
+  border-bottom: 4px solid #41372d;
+  justify-content: space-between;
+
+  align-items: center;
+  background-color: rgb(84, 137, 101);
+  color: rgb(233, 240, 235);
+}
+#container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  font-family: "Honk", system-ui;
+  background-color: 84, 137, 101;
+  height: 9rem;
+  width: 35rem;
+}
+#container2 {
+  display: flex;
+  justify-content: space-evenly;
+  width: 9rem;
+  height: 2rem;
+}
+#mid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 38rem;
+  width: 100%;
+  padding-top: 5rem;
+  background-color: rgba(51, 198, 124, 0.2);
+}
+
+#mid > * {
+  display: flex;
+
+  /* border: 2px solid red; */
+}
+
+#footer {
+  height: 2rem;
+  justify-content: center;
+  align-items: end;
+  width: 100%;
+  background-color: rgb(84, 137, 101);
+  border: 2px solid black;
+}
+p {
+  /* padding-top: 5rem; */
+  padding-left: 3rem;
+
+  width: 33rem;
+  font-size: 20px;
+  /* height: 10rem; */
+}
+p::first-letter {
+  font-size: 6rem; /* Adjust as needed */
+  font-family: "Abel", sans-serif; /* Replace with your preferred font */
+  float: left;
+
+  line-height: 0.8;
+  text-align: justify;
+}
+
+#image {
+  width: 5rem;
+  cursor: pointer;
+  height: 2rem;
+  &:hover {
+    /* Example 1: Zoom in and darken slightly */
+    transform: scale(1.1);
+    filter: brightness(90%);
+
+    /* Example 2: Rotate slightly and add a border */
+    transform: rotate(0deg);
+    background-color: #475e54;
+    border-radius: 1rem;
+    border: 2px solid #164f37;
+  }
+}
+#artistimage {
+  /* padding-right: 5rem; */
+  width: 15rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.45);
+  border: 3px solid rgb(84, 137, 101);
+  border-radius: 55px;
+  height: 17rem;
+}
+#midleft {
+  display: flex;
+  flex-direction: row;
+  padding: 2px;
+}
+#midright {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+}
+#table,
+tr,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  color: #151a19;
+  font-size: 1rem;
+  width: 9rem;
+  font-weight: 900;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI";
+  padding: 12px 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#table,
+thead,
+tr {
+  height: 2rem;
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+#styled-table,
+tbody,
+tr {
+  border-bottom: 1px solid #dddddd;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  justify-content: right;
+  align-items: end;
+  list-style-type: none;
+}
+#styled-table,
+tbody,
+tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+#styled-table,
+tbody,
+tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+#tableimage {
+  border: 4px solid rgb(84, 137, 101);
+  height: 9rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+  width: 7rem;
+  justify-content: center;
+}
+#cart {
+  height: 2rem;
+  width: 2rem;
+  &:hover {
+    /* Example 1: Zoom in and darken slightly */
+    transform: scale(1);
+    filter: brightness(90%);
+
+    /* Example 2: Rotate slightly and add a border */
+    transform: rotate(0deg);
+    background-color: #475e54;
+    border-radius: 0.4rem;
+    border: 2px solid #164f37;
+  }
+}
+nav,
+footer {
+  display: flex;
+  font-size: 25px;
+  background-color: rgba(40, 82, 72, 0.5);
+  padding-left: 6rem;
+  font-family: "Roboto Condensed", sans-serif;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 858px) {
+  /* Styles for screens 768px wide or smaller */
+  *,
+  ::after,
+  ::before {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  #header {
+    height: 15rem;
+    font-size: 30px;
+  }
+  #mid {
+    flex-direction: column;
+    height: 78rem;
+    width: 100%;
+  }
+  #midleft,
+  #midright {
+    padding: 5px;
+    width: 100%;
+  }
+  p {
+    width: 90%;
+
+    font-size: 16px;
+  }
+  #artistimage {
+    width: 10rem;
+  }
+  #table,
+  td,
+  th {
+    font-size: 0.8rem;
+  }
+  #footer {
+    height: 8rem;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+    font-size: 2rem;
+    background-color: rgb(84, 137, 101);
+    border: 2px solid black;
+  }
+  #cart {
+    height: 2rem;
+    width: 2rem;
+  }
+  nav {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}

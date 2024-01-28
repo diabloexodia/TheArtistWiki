@@ -75,7 +75,7 @@ body {
   justify-content: center;
   align-items: end;
   width: 100%;
-  background-color: rgb(84, 137, 101);
+  background-color: rgb(84, 137, 101,0.6);
   border: 2px solid black;
 }
 p {

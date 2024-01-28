@@ -4,7 +4,9 @@
   margin: 0px;
   padding: 0px;
 }
-
+body {
+  background-image: url("brandi-redd-aJTiW00qqtI-unsplash.jpg");
+}
 #header,
 #mid,
 #footer,
@@ -57,6 +59,11 @@
   background-color: rgba(51, 198, 124, 0.2);
 }
 
+#search {
+  align-items: center;
+
+  width: 12rem;
+}
 #mid > * {
   display: flex;
 
@@ -182,22 +189,64 @@ tr:last-of-type {
   width: 2rem;
   &:hover {
     /* Example 1: Zoom in and darken slightly */
-    transform: scale(1);
-    filter: brightness(90%);
+
+    filter: brightness(110%);
 
     /* Example 2: Rotate slightly and add a border */
     transform: rotate(0deg);
-    background-color: #475e54;
+    background-color: #6fc5a0;
     border-radius: 0.4rem;
-    border: 2px solid #164f37;
+    border: 1px solid #164f37;
   }
 }
-nav,
+nav {
+  display: flex;
+  flex-direction: row-reverse;
+
+  justify-content: space-between;
+}
+#authname {
+  /* flex-direction: column; */
+  align-self: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  margin-right: 120px;
+}
+#soclinks {
+  align-self: flex-end;
+  order: -1;
+  justify-self: flex-end;
+
+  border-radius: 10px;
+}
+#searchbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 40px;
+  align-self: center;
+}
+#search {
+  border: 2px solid #6fc5a0;
+  height: 1.5rem;
+  font-size: 16px;
+  font-style: italic;
+  text-indent: 20px;
+  letter-spacing: -0.2px;
+  border-radius: 20px;
+}
+#searchicon {
+  width: 21px;
+  aspect-ratio: auto 21 / 21;
+  height: 21px;
+}
 footer {
   display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   font-size: 25px;
   background-color: rgba(40, 82, 72, 0.5);
-  padding-left: 6rem;
+  /* padding-left: 6rem; */
   font-family: "Roboto Condensed", sans-serif;
   justify-content: space-evenly;
 }

@@ -18,6 +18,9 @@
   /* border: 2px solid black; */
   height: 20%;
 }
+#container1 {
+  flex-grow: 1;
+}
 
 #header {
   height: 4rem;
